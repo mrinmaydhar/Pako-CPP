@@ -1,13 +1,6 @@
 # Pako-CPP
 Game created using Borland Graphics Interface in Turbo C++ emulated in DOSBox
 
-To be included in next build:
-1. More walls
-2. Timer
-3. Mouse Integration
-4. Triple Buffer video memory (simultaneous artifact render)
-5. Procedurally generated mazes: depth based, recursive division etc.
-
 ## Introduction and Scope
 
 This project started in winter of 2016, as a project for the 10+2 practical examinations. At the time, due to limitations in time, and knowledge, no video buffer for artifacts was used. So each time the screen had to be refreshed for the objects to render, real time. They were initialised, stored in memory, and destroyed sequentially; for each object resulting in horrible frame times, even for a DOSBox Emulator (the equivalent of a Pentium I PC).
@@ -44,3 +37,11 @@ The flow of the program begins at *main()*, which is the driver function.
 *soundfun()* is used during the beginning of the program, where a welcome screen is shown along with a sound routine, using *Sound()* at a specified frequency for a specified period of time in milliseconds.
 
 *struct wall* is used to define the dimensional aspects of the ‘kill-walls’ used in the game. The actual gameplay code is in *game(int&)* where the pie moves according to user input.
+
+## TODO
+
+1. More walls
+2. Timer
+3. Mouse Integration
+4. Triple Buffer video memory (simultaneous artifact render)
+5. Procedurally generated mazes: depth based, recursive division etc.
